@@ -7,7 +7,7 @@ const Hero = () => {
       <h2 className="text-4xl md:text-5xl font-bold mb-4">
         Decentralized Resume Verification
       </h2>
-      <p className="text-lg mb-6 max-w-xl mx-auto">
+      <p className="text-lg mb-6 max-w-xl">
         Use blockchain to verify your credentials and experiences. Say goodbye to fake resumes.
       </p>
       <button className="bg-indigo-600 hower:bg-indigo-700 transition px-6 py-3 text-white font-semibold rounded-lg animate-bounce">
