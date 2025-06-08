@@ -2,9 +2,9 @@ import react from "react";
 
 const Navbar = () => {
     return (
-    <nav className="p-4 flex justify-between items-center bg-gray-800 shadow">
-    <h1 className="text-2xl font-bold text-teal-400">ResumeChain</h1>
-    <button className="bg-teal-500 px-4 py-2 rounded text-white hover:bg-teal-600">
+    <nav className="bg-gray-900 sticky top-0 z-50 w-full px-6 py-4 flex justify-between items-center shadow-md">
+    <h1 className="text-2xl font-bold text-white">ResumeChain</h1>
+    <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition">
     Connect Wallet
     </button>
     </nav>
