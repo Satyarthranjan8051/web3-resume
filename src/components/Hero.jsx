@@ -2,14 +2,15 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="text-center py-20 px-4 bg-gray-900">
-      <h2 className="text-4xl font-bold mb-4">
+    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white flex flex-col justify-center items-center text-center px-4">
+      
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
         Decentralized Resume Verification
       </h2>
       <p className="text-lg mb-6 max-w-xl mx-auto">
         Use blockchain to verify your credentials and experiences. Say goodbye to fake resumes.
       </p>
-      <button className="bg-teal-500 px-6 py-3 rounded text-white text-lg hover:bg-teal-600">
+      <button className="bg-indigo-600 hower:bg-indigo-700 transition px-6 py-3 text-white font-semibold rounded-lg animate-bounce">
         Launch App
       </button>
     </section>
