@@ -1,42 +1,27 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes, FaPaperPlane } from "react-icons/fa";
+import React from "react";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="flex items-center justify-between px-6 py-4 text-white">
-      {/* Logo */}
-      <div className="text-xl font-bold">ResumeChain</div>
-
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-6">
-        <li><a href="#">Software</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Submit</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">Create Account</a></li>
-      </ul>
-
-      {/* Hamburger */}
-      <div className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+const Navbar = () => (
+  <header className="flex justify-between items-center mb-12 px-8 py-8">
+    <div className="flex items-center space-x-3">
+      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+        <span className="material-symbols-outlined text-white text-xl">link</span>
       </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center gap-6 text-lg md:hidden transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <a href="#">Software</a>
-        <a href="#">Pricing</a>
-        <a href="#">Submit</a>
-        <a href="#">Sign In</a>
-        <a href="#">Create Account</a>
-      </div>
+      <h1 className="text-2xl font-bold">ResumeChain</h1>
+    </div>
+    <nav className="hidden md:flex space-x-8">
+      <a href="#" className="hover:text-purple-400 transition-colors">Features</a>
+      <a href="#" className="hover:text-purple-400 transition-colors">Pricing</a>
+      <a href="#" className="hover:text-purple-400 transition-colors">About</a>
     </nav>
-  );
-};
+    <div className="flex items-center space-x-4">
+      <button className="px-4 py-2 border border-purple-500 rounded-lg hover:bg-purple-500 transition-colors">
+        Sign In
+      </button>
+      <button className="px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all">
+        Get Started
+      </button>
+    </div>
+  </header>
+);
 
 export default Navbar;

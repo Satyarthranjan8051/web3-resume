@@ -1,25 +1,43 @@
 import React from "react";
 
-const Features = () => {
-  return (
-    <section className="py-16 bg-gray-800 text-white text-center px-6">
-      <h3 className="text-3xl font-bold mb-10">Features</h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div>
-        <h4 className="text-xl font-semibold mb-2">🧾 Tokenized Proofs</h4>
-        <p>Each verification is represented as a non-transferable NFT.</p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold mb-2">🔐 Self-Sovereign Identity</h4>
-        <p>You own your data, no centralized control or third parties.</p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold mb-2">🌐 Web3 Integration</h4>
-        <p>Connect with Metamask or WalletConnect to access your credentials.</p>
-      </div>
-      </div>
-    </section>
-  );
-};
+const features = [
+	{
+		icon: "security",
+		bg: "bg-purple-500",
+		title: "Blockchain Verified",
+		desc: "Your resume is stored securely on the blockchain, making it tamper-proof and verifiable.",
+	},
+	{
+		icon: "palette",
+		bg: "bg-blue-500",
+		title: "Professional Templates",
+		desc: "Choose from our collection of modern, ATS-friendly resume templates.",
+	},
+	{
+		icon: "currency_bitcoin",
+		bg: "bg-green-500",
+		title: "Crypto Payments",
+		desc: "Pay with your favorite cryptocurrency including Solana, Ethereum, and more.",
+	},
+];
+
+const Features = () => (
+	<section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 px-8">
+		{features.map((f, i) => (
+			<div
+				key={i}
+				className="bg-slate-800 p-6 rounded-xl hover:bg-slate-700 transition-colors"
+			>
+				<div
+					className={`w-12 h-12 ${f.bg} rounded-lg flex items-center justify-center mb-4`}
+				>
+					<span className="material-symbols-outlined text-white">{f.icon}</span>
+				</div>
+				<h3 className="text-xl font-semibold mb-3">{f.title}</h3>
+				<p className="text-gray-300">{f.desc}</p>
+			</div>
+		))}
+	</section>
+);
 
 export default Features;
