@@ -13,8 +13,9 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-50 text-gray-900">
+      <div className="bg-black min-h-screen text-white">
         <Navbar />
+        <main className='mt-10'></main>
         <Hero />
         <Features />
         <CTA />
